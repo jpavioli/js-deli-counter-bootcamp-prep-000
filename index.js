@@ -27,7 +27,7 @@ function currentLine(deliLine){
   else {
     textReturn = textReturn + ':'
     for (let i=0;i<deliLine.length;i++){
-      textReturn = textReturn + (i+1) + '. '+deliLine[i]}
+      textReturn = textReturn + (i+1) + '. ' + deliLine[i]
       if (i!==deliLine.length) {
         textReturn = textReturn + ','
       }
