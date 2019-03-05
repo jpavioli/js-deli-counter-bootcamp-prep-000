@@ -20,17 +20,18 @@ function nowServing(deliLine){
 
 //build a function currentLine(line). If the line is empty, return "The line is currently empty"; if there are pople in line return "The line is currently: [#]. [line[i]],... etc.
 function currentLine(deliLine){
+  textArray = []
   if(deliLine.length === 0){
-    returnString.concat("The line is currently empty.")
+    textArray.push("The line is currently empty.")
   }
   else {
-    returnString.concat("The line is currently: ")
+    textArray.push("The line is currently: ")
     for (i=0;i<deliLine.length;i++){
-      returnString.concat((i+1)+". "+deliLine[i])
+      textArray.push((i+1)+". "+deliLine[i])
       if (i!==deliline.length) {
-        returnString.concat(",")
+        textArray.push(",")
       }
     }
-    return returnString
+    return textArray.toString()
   }
 }
