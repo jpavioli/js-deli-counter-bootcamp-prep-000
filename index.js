@@ -8,13 +8,12 @@ function takeANumber(deliLine,newPerson){
 //build a function nowServing. This function should accept the currentl ine of people (katzDeliLine) and return the first person in line, and then remove that individual from the line. If there nis nobody in line, it should return "There is nobody waiting to be served!"
 
 function nowServing(deliLine){
-  var returnString =""
   if(deliLine.length !== 0){
-    returnString.concat("Currently serving "+deliLine[0]+".")
+    return "Currently serving "+deliLine[0]+"."
     deliLine.shift()
   }
   else{
-    returnString.concat("There is nobody waiting to be served!")
+    return "There is nobody waiting to be served!"
   }
   return returnString 
 }
