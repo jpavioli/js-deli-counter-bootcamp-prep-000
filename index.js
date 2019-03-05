@@ -20,16 +20,16 @@ function nowServing(deliLine){
 
 //build a function currentLine(line). If the line is empty, return "The line is currently empty"; if there are pople in line return "The line is currently: [#]. [line[i]],... etc.
 function currentLine(deliLine){
-  var textReturn = 'The line is currently '
+  var textReturn = 'The line is currently'
   if(deliLine.length === 0){
-    textReturn = textReturn + 'empty.'
+    textReturn = textReturn + ' empty.'
   }
   else {
-    textReturn = textReturn + ':'
+    textReturn = textReturn + ': '
     for (let i=0;i<deliLine.length;i++){
       textReturn = textReturn + (i+1) + '. ' + deliLine[i]
       if (i!==deliLine.length) {
-        textReturn = textReturn + ','
+        textReturn = textReturn + ', '
       }
     }
   }
