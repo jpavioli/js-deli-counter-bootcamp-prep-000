@@ -1,0 +1,38 @@
+//build a function "takeANumber" that takes in  the current line of people along with the new person's name. The function return a welcome message including the position in line "Welcome, [name]. You are number [array.length] in line"
+
+function takeANumber(deliLine,newPerson){
+  deliLine.push(newPerson)
+  return "Welcome, "+newPerson+". You are number "+(deliLine.length)+" in line."
+}
+
+//build a function nowServing. This function should accept the currentl ine of people (katzDeliLine) and return the first person in line, and then remove that individual from the line. If there nis nobody in line, it should return "There is nobody waiting to be served!"
+
+function nowServing(deliLine){
+  var returnString =""
+  if(deliLine.length !== 0){
+    returnString.concat("Currently serving "+deliLine[0]+".")
+    deliLine.shift()
+  }
+  else{
+    returnString.concat("There is nobody waiting to be served!")
+  }
+  return returnString 
+}
+
+//build a function currentLine(line). If the line is empty, return "The line is currently empty"; if there are pople in line return "The line is currently: [#]. [line[i]],... etc.
+function currentLine(deliLine){
+  var returnString = ""
+  if(deliLine.length === 0){
+    returnString.concat("The line is currently empty.")
+  }
+  else {
+    returnString.concat("The line is currently: ")
+    for (i=0;i<deliLine.length;i++){
+      returnString.concat((i+1)+". "+deliLine[i])
+      if (i!==deliline.length) {
+        returnString.concat(",")
+      }
+    }
+    return returnString
+  }
+}
