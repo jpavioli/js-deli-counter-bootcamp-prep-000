@@ -22,14 +22,14 @@ function nowServing(deliLine){
 function currentLine(deliLine){
   textArray = []
   if(deliLine.length === 0){
-    textArray.push("The line is currently empty.")
+    textArray.push(["The line is currently empty."])
   }
   else {
-    textArray.push("The line is currently: ")
+    textArray.push(["The line is currently: "])
     for (i=0;i<deliLine.length;i++){
-      textArray.push((i+1)+". "+deliLine[i])
+      textArray.push([(i+1)+". "+deliLine[i]])
       if (i!==deliline.length) {
-        textArray.push(",")
+        textArray.push([","])
       }
     }
     return textArray.toString()
