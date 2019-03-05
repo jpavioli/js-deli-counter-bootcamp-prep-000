@@ -22,14 +22,14 @@ function nowServing(deliLine){
 function currentLine(deliLine){
   var textReturn = 'The line is currently '
   if(deliLine.length === 0){
-    textReturn.concat(' empty.')
+    textReturn = textReturn + ' empty.'
   }
   else {
-    textReturn.concat(' :')
+    textReturn = textReturn + ' :'
     for (let i=0;i<deliLine.length;i++){
-      textReturn.concat('${(i+1)}. ${deliLine[i]}' )
+      textReturn = textReturn + '${(i+1)}. ${deliLine[i]}'
       if (i!==deliLine.length) {
-        textReturn.concat(',')
+        textReturn = textReturn + ','
       }
     }
   }
