@@ -27,7 +27,7 @@ function currentLine(deliLine){
     var textReturn = "The line is currently: "
     for (var i=0;i<deliLine.length;i++){
       textReturn.concat((i+1)+". "+deliLine[i])
-      if (i!==deliline.length) {
+      if (i!==deliLine.length) {
         textReturn.concat(",")
       }
     }
